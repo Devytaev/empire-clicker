@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Empire Clicker</title>
+
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #0b0b0b;
+      color: white;
+      text-align: center;
+    }
+
+    .title {
+      margin-top: 20px;
+      font-size: 24px;
+      color: gold;
+    }
+
+    .stats {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    .btn {
+      margin-top: 60px;
+      font-size: 40px;
+      padding: 25px 50px;
+      border: none;
+      border-radius: 20px;
+      background: gold;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px;
+
+      /* ✨ добавил анимацию */
+      transition: 0.2s;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    .btn {
+      box-shadow: 0 0 20px gold;
+    }
+    <style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0b0b0b;
+  color: white;
+  text-align: center;
+  touch-action: manipulation;
+}
+
+/* верхняя панель */
+.stats {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* большая кнопка как в hamster */
+.btn {
+  width: 80%;
+  height: 200px;
+  font-size: 40px;
+  margin-top: 30px;
+  border-radius: 30px;
+  border: none;
+  background: gold;
+  box-shadow: 0 0 25px gold;
+}
+
+/* магазин снизу */
+.shop {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #111;
+  padding: 10px;
+}
+.shop button {
+  width: 30%;
+  padding: 10px;
+}
+</style>
+  </style>
+</head>
+
+<body>
+
+  <div class="stats">
+    💰 <span id="money">0</span>
+    📈 Lv <span id="level">1</span>
+    ⚡ <span id="energy">50</span>
+  </div>
+
+  <button class="btn" onclick="tap()">🖱️ TAP</button>
+
+  <div class="shop">
+    <button onclick="buy('click')">+ATK</button>
+    <button onclick="buy('energy')">+ENERGY</button>
+    <button onclick="buy('full')">FULL</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
