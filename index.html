@@ -150,20 +150,89 @@ body {
       margin-top: 20px;
       color: #ffd700;
     }
+    body {
+  margin: 0;
+  font-family: Arial;
+  background: #0b0b0b;
+  color: white;
+  text-align: center;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+/* верхняя панель */
+.top {
+  padding: 10px;
+  font-size: 16px;
+  color: gold;
+}
+
+/* центр */
+.center {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🔥 КРУГЛАЯ КНОПКА */
+.circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, gold, orange);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  box-shadow: 0 0 30px gold;
+  transition: 0.1s;
+}
+
+.circle:active {
+  transform: scale(0.92);
+}
+
+/* магазин */
+.shop {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.shop button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #222;
+  color: white;
+}
   </style>
 </head>
 
 <body>
 
-  <div class="title">👑 Empire Clicker</div>
-
   <div class="top">
-    💰 Money: <span id="money">0</span><br>
-    📈 Level: <span id="level">1</span><br>
-    ⚡ Energy: <span id="energy">50</span>
+    💰 <span id="money">0</span> |
+    📈 Lv <span id="level">1</span> |
+    ⚡ <span id="energy">50</span>
   </div>
 
-  <button class="btn" onclick="tap()">🖱️ TAP</button>
+  <!-- 🔥 КРУГЛАЯ КНОПКА КАК HAMSTER -->
+  <div class="center">
+    <div class="circle" onclick="tap()">
+      🐹
+    </div>
+  </div>
+
+  <!-- 🏪 МАГАЗИН -->
+  <div class="shop">
+    <button onclick="buy('click')">⚔ +Power</button>
+    <button onclick="buy('energy')">⚡ Energy</button>
+    <button onclick="buy('full')">🔋 Fill</button>
+  </div>
 
   <script src="app.js"></script>
 

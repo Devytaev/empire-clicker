@@ -23,18 +23,20 @@ function save() {
 
 // клик
 function tap() {
-  if (state.energy <= 0) return;
-
   state.money += state.clickPower * 1000000;
   state.energy -= 1;
-
-  // лёгкая вибрация как в мобильных играх
-  if (window.Telegram?.WebApp?.HapticFeedback) {
-    Telegram.WebApp.HapticFeedback.impactOccurred("light");
-  }
-
   save();
   render();
+}
+
+function buy(type) {
+  // логика магазина
+}
+
+function render() {
+  document.getElementById("money").innerText = state.money;
+  document.getElementById("level").innerText = state.level;
+  document.getElementById("energy").innerText = state.energy;
 }
 
 // реферал
